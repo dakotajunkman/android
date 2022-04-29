@@ -59,4 +59,21 @@ fun main() {
     }
 
     println(add(4, 6))
+
+    var name: String? = "Dakota"
+    name = null
+
+    // how to deal with the nullable value
+    // way one
+    if (name != null) {
+        var len = name.length
+    }
+
+    // other way
+    var len2 = name?.length
+
+    // elvis operator: used to assign a default value in case of a null value
+    // will assign default value Carlos if name is null
+    val otherName = name ?: "Carlos"
+    println(otherName)
 }
