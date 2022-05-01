@@ -3,7 +3,7 @@ package com.example.basickotlin
 import java.lang.IllegalArgumentException
 
 fun main() {
-    val car = Car()
+    val car = Cars()
     println(car.myBrand)
     car.maxSpeed = 2
 
@@ -15,7 +15,7 @@ fun main() {
     val (myId, myName) = user // deconstruction
 }
 
-class Car {
+private class Cars {
     // this needs to be set later, perhaps in init
     lateinit var owner : String
 
