@@ -6,6 +6,13 @@ fun main() {
     val car = Car()
     println(car.myBrand)
     car.maxSpeed = 2
+
+    val user = User(1, "Dakota")
+    val name = user.name
+    print(user.component1()) // 1
+    print(user.component2()) // "Dakota"
+
+    val (myId, myName) = user // deconstruction
 }
 
 class Car {
@@ -15,6 +22,8 @@ class Car {
     /* default getters are created for all class members
      * default setters are created for any members initialized with var
      * custom getters and setters can be created as shown below
+     * field is used to represent the member in getters
+     * value is used in setters as parameter
      */
 
     // custom getter
@@ -31,3 +40,7 @@ class Car {
     var myModel = "M5"
         private set // member can only be set within the class
 }
+
+// must have at least 1 parameter
+// compiler automatically creates an equals and toString method
+data class User(val id: Long, val name: String)
