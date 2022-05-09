@@ -58,26 +58,31 @@ class MainActivity : AppCompatActivity() {
                     prefix = "-"
                     tvValue = tvValue.substring(1)
                 }
-                if (tvValue.contains("-")) {
-                    val splitVal = tvValue.split("-")
-                    var left = prefix + splitVal[0]
-                    var right = splitVal[1]
-                    tvInput.text = (left.toDouble() - right.toDouble()).toString()
-                }else if (tvValue.contains("+")) {
-                    val splitVal = tvValue.split("+")
-                    var left = prefix + splitVal[0]
-                    var right = splitVal[1]
-                    tvInput.text = (left.toDouble() + right.toDouble()).toString()
-                }else if (tvValue.contains("/")) {
-                    val splitVal = tvValue.split("/")
-                    var left = prefix + splitVal[0]
-                    var right = splitVal[1]
-                    tvInput.text = (left.toDouble() / right.toDouble()).toString()
-                }else if (tvValue.contains("*")) {
-                    val splitVal = tvValue.split("*")
-                    var left = prefix + splitVal[0]
-                    var right = splitVal[1]
-                    tvInput.text = (left.toDouble() * right.toDouble()).toString()
+                when {
+                    tvValue.contains("-") -> {
+                        val splitVal = tvValue.split("-")
+                        var left = prefix + splitVal[0]
+                        var right = splitVal[1]
+                        tvInput.text = (left.toDouble() - right.toDouble()).toString()
+                    }
+                    tvValue.contains("+") -> {
+                        val splitVal = tvValue.split("+")
+                        var left = prefix + splitVal[0]
+                        var right = splitVal[1]
+                        tvInput.text = (left.toDouble() + right.toDouble()).toString()
+                    }
+                    tvValue.contains("/") -> {
+                        val splitVal = tvValue.split("/")
+                        var left = prefix + splitVal[0]
+                        var right = splitVal[1]
+                        tvInput.text = (left.toDouble() / right.toDouble()).toString()
+                    }
+                    tvValue.contains("*") -> {
+                        val splitVal = tvValue.split("*")
+                        var left = prefix + splitVal[0]
+                        var right = splitVal[1]
+                        tvInput.text = (left.toDouble() * right.toDouble()).toString()
+                    }
                 }
                 tvInput.text = removeZeroAfterDot(tvInput.text.toString())
             } catch(err: ArithmeticException) {
