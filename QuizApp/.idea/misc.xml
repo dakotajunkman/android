@@ -3,9 +3,13 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="app/src/main/res/drawable/correct_option_border_bg.xml" value="0.4025" />
         <entry key="app/src/main/res/drawable/default_option_border_bg.xml" value="0.457" />
+        <entry key="app/src/main/res/drawable/selected_option_border_bg.xml" value="0.4025" />
+        <entry key="app/src/main/res/drawable/wrong_option_border_bg.xml" value="0.4025" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.6354166666666666" />
         <entry key="app/src/main/res/layout/activity_quiz_questions.xml" value="0.37815338042381436" />
+        <entry key="app/src/main/res/layout/activity_result.xml" value="0.37815338042381436" />
       </map>
     </option>
   </component>

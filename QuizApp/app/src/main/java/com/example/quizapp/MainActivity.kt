@@ -22,6 +22,7 @@ class MainActivity : AppCompatActivity() {
                 // intent is an operation to be performed
                 // in this case it is switching activities
                 val intent = Intent(this, QuizQuestionsActivity::class.java)
+                intent.putExtra(Constants.USER_NAME, etName.text.toString())
                 startActivity(intent) // actually switches to new activity
                 finish() // closes previous activity
             }
